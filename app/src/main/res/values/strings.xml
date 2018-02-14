@@ -30,7 +30,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="restaurants_title">Restaurants</string>
+    <string name="restaurants_title">Eating</string>
     <string name="thingstodo_title">ThingsTodo</string>
     <string name="sightseeing_title">Sightseeing</string>
     <string name="phrases_title">Phrases</string>

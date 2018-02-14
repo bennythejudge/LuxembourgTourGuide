@@ -99,9 +99,9 @@ public class PhrasesFragment extends Fragment {
 
         // Create a list of locationFacts
         final ArrayList<LocationFact> locationFacts = new ArrayList<LocationFact>();
-        locationFacts.add(new LocationFact("minto wuksus", "Where are you going?",
+        locationFacts.add(new LocationFact("something in luxembourgish", "Where are you going?",
                 -1, R.raw.phrase_where_are_you_going));
-        locationFacts.add(new LocationFact("tinnә oyaase'nә", "What is your name?",
+        locationFacts.add(new LocationFact("something in luxembourgish", "What is your name?",
                 -1, R.raw.phrase_what_is_your_name));
         locationFacts.add(new LocationFact("oyaaset...", "My name is...",
                 -1, R.raw.phrase_my_name_is));
@@ -125,8 +125,8 @@ public class PhrasesFragment extends Fragment {
         // simple_list_item_1.xml layout resource defined in the Android framework.
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
-        WordAdapter adapter =
-                new WordAdapter(getActivity(), locationFacts, R.color.category_phrases);
+        LocationAdapter adapter =
+                new LocationAdapter(getActivity(), locationFacts, R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

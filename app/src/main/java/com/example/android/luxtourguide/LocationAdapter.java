@@ -15,13 +15,13 @@ import java.util.ArrayList;
 /**
  * Created by neo on 31/12/2017.
  */
-public class WordAdapter extends ArrayAdapter<LocationFact> {
+public class LocationAdapter extends ArrayAdapter<LocationFact> {
 
     /* Resourtce ID for the background color */
     private int mColorResouceId;
 
     /* constructor */
-    public WordAdapter(Context context, ArrayList<LocationFact> pLocationFacts, int colorResourceId) {
+    public LocationAdapter(Context context, ArrayList<LocationFact> pLocationFacts, int colorResourceId) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not

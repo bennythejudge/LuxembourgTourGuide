@@ -131,8 +131,8 @@ public class SighseeingFragment extends Fragment {
         // simple_list_item_1.xml layout resource defined in the Android framework.
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
-        WordAdapter adapter =
-                new WordAdapter(getActivity(), families, R.color.category_family);
+        LocationAdapter adapter =
+                new LocationAdapter(getActivity(), families, R.color.category_family);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

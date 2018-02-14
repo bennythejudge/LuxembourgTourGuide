@@ -1,3 +1,8 @@
+/*
+la sfida e' di scardinare il media player e invece quando uno seleziona l'entry, va ad una
+pagina intera con la descrizione del ristorante e da li puo' solo tornare indietro
+ */
+
 package com.example.android.luxtourguide;
 
 
@@ -85,34 +90,24 @@ public class RestaurantsFragment extends Fragment {
         // Create a list of locationFacts
         final ArrayList<LocationFact> locationFacts = new ArrayList<LocationFact>();
 
-        locationFacts.add(new LocationFact("lutti", "one",
-                R.drawable.number_one, R.raw.number_one));
-        locationFacts.add(new LocationFact("otiiko", "two",
-                R.drawable.number_two,R.raw.number_two));
-        locationFacts.add(new LocationFact("tolookosu", "three",
-                R.drawable.number_three, R.raw.number_three));
-        locationFacts.add(new LocationFact("oyyisa", "four",
-                R.drawable.number_four, R.raw.number_four));
-        locationFacts.add(new LocationFact("massokka", "five",
-                R.drawable.number_five, R.raw.number_five ));
-        locationFacts.add(new LocationFact("temmokka", "six",
-                R.drawable.number_six, R.raw.number_six));
-        locationFacts.add(new LocationFact("kenekaku", "seven",
-                R.drawable.number_seven, R.raw.number_seven));
-        locationFacts.add(new LocationFact("kawinta", "eight",
-                R.drawable.number_eight, R.raw.number_eight));
-        locationFacts.add(new LocationFact("wo'e", "nine",
-                R.drawable.number_nine, R.raw.number_nine));
-        locationFacts.add(new LocationFact("na'aacha", "ten",
-                R.drawable.number_ten, R.raw.number_ten));
+        locationFacts.add(new LocationFact("Pulcinella",
+                "one very long string or blob of text",
+                R.drawable.restaurant_one,
+                "address"));
+        locationFacts.add(new LocationFact("Bonchu", "two",
+                R.drawable.number_two));
+        locationFacts.add(new LocationFact("r1", "three",
+                R.drawable.number_three));
+        locationFacts.add(new LocationFact("r2", "four",
+                R.drawable.number_four));
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings. The
         // adapter knows how to create layouts for each item in the list, using the
         // simple_list_item_1.xml layout resource defined in the Android framework.
         // This list item layout contains a single {@link TextView}, which the adapter will set to
         // display a single word.
-        WordAdapter adapter =
-                new WordAdapter(getActivity(), locationFacts,
+        LocationAdapter adapter =
+                new LocationAdapter(getActivity(), locationFacts,
                         R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
@@ -130,26 +125,9 @@ public class RestaurantsFragment extends Fragment {
                 Log.v("setOnItemClickListener",
                         "here I am " + String.valueOf(position) + " " + String.valueOf(l));
 
-                /* release the mediaplayer if necessary */
-                releaseMediaPlayer();
-
                 // get the LocationFact object for this item
                 LocationFact locationFact = locationFacts.get(position);
 
-                // request audio focus
-                int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
-                        AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
-
-                // did we get audio focus?
-                if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-                    // yes we did!
-                    // get the sound file
-                    // finally setup the mediaplayer
-                    mediaPlayer = MediaPlayer.create(getActivity(),
-                            locationFact.getAudioResourceId());
-                    mediaPlayer.start();
-                    mediaPlayer.setOnCompletionListener(mCompletionListener);
-                }
             }
         });
 

@@ -9,6 +9,7 @@ public class LocationFact {
     private String mLocationDescription;
     private int mLocationImageId = -1;
     private int mLocationSound = -1;
+    private String mLocationAddress;
 
     // here we have two constructors
     // one takes 2 arguments when the image is not needed
@@ -23,6 +24,14 @@ public class LocationFact {
         mLocationTitle = description;
         mLocationDescription = title;
         mLocationImageId = drawableId;
+    }
+
+
+    public LocationFact(String title, String description, int drawableId, String mLocationAddress) {
+        mLocationTitle = description;
+        mLocationDescription = title;
+        mLocationImageId = drawableId;
+        mLocationAddress = mLocationAddress;
     }
 
     public LocationFact(String title, String description, int drawableId, int soundId) {
