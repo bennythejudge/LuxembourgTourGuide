@@ -95,7 +95,7 @@ public class SighseeingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.word_list, container, false);
+        View rootView = inflater.inflate(R.layout.element_list, container, false);
 
 
         Log.v("family", "Starts here");

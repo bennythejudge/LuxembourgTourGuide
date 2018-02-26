@@ -32,6 +32,9 @@ public class LocationAdapter extends ArrayAdapter<LocationFact> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        Log.d("resto", "context: " + String.valueOf(getContext()));
+
         // Check if the existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if(listItemView == null) {
@@ -64,6 +67,14 @@ public class LocationAdapter extends ArrayAdapter<LocationFact> {
         View textContainer = (View) listItemView.findViewById(R.id.text_container);
         int color = ContextCompat.getColor(getContext(), mColorResouceId);
         textContainer.setBackgroundColor(color);
+
+        // hide the arrow when there is no sound
+
+        if (!currentLocationFact.hasSound()) {
+            ImageView smallArrow = (ImageView) listItemView.findViewById(R.id.small_arrow_on_entry);
+            Log.d("locationadapter", "smallArrow: " + smallArrow);
+            smallArrow.setVisibility(View.GONE);
+        }
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

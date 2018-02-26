@@ -92,7 +92,7 @@ public class PhrasesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.word_list, container, false);
+        View rootView = inflater.inflate(R.layout.element_list, container, false);
 
         // create the audio manager you moron!
         mAudioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);

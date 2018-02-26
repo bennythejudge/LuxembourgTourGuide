@@ -47,6 +47,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/small_arrow_on_entry"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentRight="true"
