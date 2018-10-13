@@ -1,6 +1,8 @@
 Luxembourg Tour Guide
 ===================================
 
+[![GuardRails badge](https://badges.production.guardrails.io/bennythejudge/LuxembourgTourGuide.svg)](https://www.guardrails.io)
+
 Udacity Android multiscreen course
 Build your own app
 
